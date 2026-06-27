@@ -1,0 +1,10 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+ultralytics>=8.1
+opencv-python>=4.9
+pydantic>=2.6
+python-multipart>=0.0.9
+numpy>=1.24
+pyyaml>=6.0
+lap>=0.4.0
+requests>=2.31

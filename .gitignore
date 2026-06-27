@@ -1,0 +1,59 @@
+# Unity generated files
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/UserSettings/
+**/MemoryCaptures/
+**/Recordings/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Android / iOS outputs
+*.apk
+*.aab
+*.apks
+*.ipa
+**/apk/
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Downloaded ML models
+*.pt
+*.onnx
+
+# Secrets and signing files
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+*.mobileprovision
+
+# IDE / OS
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local agent state
+.codex/
+.agents/
