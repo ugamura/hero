@@ -8,3 +8,4 @@ numpy>=1.24
 pyyaml>=6.0
 lap>=0.4.0
 requests>=2.31
+cryptography>=42.0
