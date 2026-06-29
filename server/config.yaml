@@ -1,6 +1,6 @@
 # Detection server configuration
 model:
-  weights: "yolov8n.pt"        # yolov8n / yolov8s / yolov8m
+  weights: "yolov8n-oiv7.pt"  # Open Images V7, 601 classes / yolov8s-oiv7.pt for better accuracy
   conf_threshold: 0.4
   iou_threshold: 0.45
   use_tracker: true
@@ -10,23 +10,29 @@ server:
   host: "0.0.0.0"
   port: 8000
 
-# しりとりに不向きなクラスは除外
+# しりとりに不向きなクラスは除外（OIV7 の人体関連ラベルをすべて列挙）
 exclude_labels:
   - person
+  - human face
+  - human body
+  - human hand
+  - human arm
+  - human leg
+  - human head
+  - human eye
+  - human ear
+  - human nose
+  - human mouth
+  - human beard
+  - human hair
+  - man
+  - woman
+  - boy
+  - girl
 
 # 複数語クラスを 1 単語に正規化
+# デフォルト: 末尾の単語を使用（例: "coffee cup" → "cup"）
+# ゲームで誤解を招くケースだけ明示的に上書き
 label_normalize:
-  cell phone: phone
   hot dog: hotdog
-  dining table: table
-  sports ball: ball
-  tennis racket: racket
-  wine glass: glass
   teddy bear: teddybear
-  potted plant: plant
-  stop sign: sign
-  fire hydrant: hydrant
-  parking meter: meter
-  baseball bat: bat
-  baseball glove: glove
-  traffic light: light
